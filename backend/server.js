@@ -79,13 +79,13 @@ const apiRoutes = require("./routes/apiRoutes")
 //mongodb connection
 const connectDB = require("./config/db") 
 connectDB();    
- 
+
 app.use('/api', apiRoutes);
 
 const path = require("path");
 if (process.env.NODE_ENV === "production") {
-  app.use(express.state(path.join(_dirname, "../frontend/build")));
-  app.get("*", (req, res) => res.sendFile(path.resolve(_dirname, "../frontend", "build", "index.html")));
+  app.use(express.state(path.join(__dirname, "../frontend/build")));
+  app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "../frontend", "build", "index.html")));
 } else {
   app.get("/", (req, res) => {
     res.json({ message: "API running..." });
