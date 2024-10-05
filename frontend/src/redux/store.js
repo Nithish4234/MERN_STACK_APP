@@ -5,7 +5,7 @@ import {thunk} from "redux-thunk";
 import { cartReducer } from './reducers/cartReducers';
 import { userRegisterLoginReducer } from './reducers/userReducers';
 import { getCategoriesReducer } from './reducers/categoryReducers';
-import { getCategories } from './actions/categoryActions';
+//import { getCategories } from './actions/categoryActions';
 import { adminChatReducer } from './reducers/adminChatReducers';
 
 const reducer = combineReducers({
