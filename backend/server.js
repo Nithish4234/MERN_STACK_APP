@@ -14,9 +14,9 @@ global.io = new Server(httpServer);
 
 app.use(express.json());
 app.use(cookieParser()); 
-app.use(fileUpload()); 
+app.use(fileUpload());   
 
-const admins = []; 
+const admins = [];    
 let activeChats = [];
 function get_random(array) {
   return array[Math.floor(Math.random() * array.length)];
@@ -74,7 +74,10 @@ io.on("connection", (socket) => {
 
 const apiRoutes = require("./routes/apiRoutes")
 
-  
+//remove for heroku
+// app.get("/", async (req, res, next) => {    
+//   res.json({ message: "API running..." });  
+// });
   
 //mongodb connection
 const connectDB = require("./config/db") 
@@ -82,6 +85,7 @@ connectDB();
 
 app.use('/api', apiRoutes);
 
+//add for heroku
 const path = require("path");
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/build")));
