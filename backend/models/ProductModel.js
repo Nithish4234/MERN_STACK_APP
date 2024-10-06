@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 const Review = require("./ReviewModel")
+const { path } = require("../routes/apiRoutes")
 const imageSchema = mongoose.Schema({
     path: {type: String, required: true}
 }) 
