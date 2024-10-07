@@ -21,6 +21,7 @@ const ProductCarouselComponent = ({ bestsellers })=>{
         <LinkContainer style={cursorP} to={`/product-details/${item._id}`}>
             <h3>Bestseller in {item.category} Category</h3>
           </LinkContainer>
+          <h3>First slide label</h3>
           <p>{item.description}</p>
         </Carousel.Caption>
       </Carousel.Item>

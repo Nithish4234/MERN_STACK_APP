@@ -10,7 +10,7 @@ const HomePageComponent = ({ categories, getBestsellers }) => {
     const [mainCategories, setMainCategories] = useState([]);
     const [bestsellers, setBestsellers] = useState([]); 
 
-    useEffect(() => {
+    useEffect(() => {  
         getBestsellers()
         .then((data) => {
             setBestsellers(data);

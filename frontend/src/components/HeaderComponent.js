@@ -64,7 +64,7 @@ const HeaderComponent = () => {
         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
             <Container>
                 <LinkContainer to="/">
-                    <Navbar.Brand /*href="/"*/>BEST ONLINE SHOP</Navbar.Brand>
+                    <Navbar.Brand >BEST ONLINE SHOP</Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

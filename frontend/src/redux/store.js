@@ -10,7 +10,7 @@ import { adminChatReducer } from './reducers/adminChatReducers';
 
 const reducer = combineReducers({
     cart: cartReducer,
-    userRegisterLogin: userRegisterLoginReducer,
+    userRegisterLogin: userRegisterLoginReducer,  
     getCategories: getCategoriesReducer,
     adminChat: adminChatReducer,
 })
