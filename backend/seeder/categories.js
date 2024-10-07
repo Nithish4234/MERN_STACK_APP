@@ -78,4 +78,4 @@ const categories = [
   },
 ]
 
-module.exports = categories
+module.exports = categories 
