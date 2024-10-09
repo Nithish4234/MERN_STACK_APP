@@ -53,8 +53,7 @@ const UserCartDetailsPageComponent = ({cartItems, itemsCount, cartSubtotal, user
                     price: item.price,
                     image: { path: item.image ? (item.image.path ?? null) : null},
                     quantity: item.quantity,
-                    count: item.count// || 1
-
+                    count: item.count,// || 1
                 }
             }),
             paymentMethod: paymentMethod,

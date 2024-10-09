@@ -18,7 +18,7 @@ const ProductForListComponent = ({ productId, name, description, price, images, 
             </Card.Text>
             <Card.Text>
               <Rating readonly size={20}
-                initialValue={rating} /> (reviewsNumber)
+                initialValue={rating} /> ({reviewsNumber})
             </Card.Text>
             <Card.Text className="h4">
               ${price}{" "}

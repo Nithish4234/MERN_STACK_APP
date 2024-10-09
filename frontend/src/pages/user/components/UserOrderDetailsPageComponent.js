@@ -15,7 +15,6 @@ const UserOrderDetailsPageComponent = ({ userInfo, getUser, getOrder, loadPayPal
     const [buttonDisabled, setButtonDisabled] = useState(false);
 
     const paypalContainer = useRef();
-    console.log(paypalContainer); 
 
     const { id } = useParams();
 
@@ -134,11 +133,11 @@ const UserOrderDetailsPageComponent = ({ userInfo, getUser, getOrder, loadPayPal
                         </ListGroup.Item>
                         <ListGroup.Item className="text-danger">
                             Total price: <span className="fw-bold">${cartSubtotal}</span>
-                        </ListGroup.Item>
+                        </ListGroup.Item>    
                         <ListGroup.Item>
                             <div className="d-grid gap-2">
                                 <Button size="lg" onClick={orderHandler} variant="danger" type="button" disabled={buttonDisabled}>
-                                    {orderButtonMessage}
+                                    {orderButtonMessage} 
                                 </Button>
                             </div>
                             <div style={{ position: "relative", zIndex: 1 }}>

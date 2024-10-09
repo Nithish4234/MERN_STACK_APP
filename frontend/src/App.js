@@ -81,7 +81,7 @@ function App() {
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
       </Routes>
-      <FooterComponent />
+      {/*<FooterComponent />*/}
     </BrowserRouter>
   );
 } 
