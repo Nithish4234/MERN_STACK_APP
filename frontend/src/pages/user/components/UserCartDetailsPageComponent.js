@@ -4,6 +4,7 @@ import CartItemComponent from "../../../components/CartItemComponent";
 import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
+//import { count } from "console";
  
 const UserCartDetailsPageComponent = ({cartItems, itemsCount, cartSubtotal, userInfo, addToCart, removeFromCart, reduxDispatch, getUser, createOrder }) => {
 
@@ -53,9 +54,10 @@ const UserCartDetailsPageComponent = ({cartItems, itemsCount, cartSubtotal, user
                     price: item.price,
                     image: { path: item.image ? (item.image.path ?? null) : null},
                     quantity: item.quantity,
-                    count: item.count,// || 1
+                    //count: item.count,
+                    count: item.count,
                 }
-            }),
+            }), 
             paymentMethod: paymentMethod,
         }
         createOrder(orderData)

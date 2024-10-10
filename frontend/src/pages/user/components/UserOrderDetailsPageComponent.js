@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 
 const UserOrderDetailsPageComponent = ({ userInfo, getUser, getOrder, loadPayPalScript, }) => {
-
+ 
     const [userAddress, setUserAddress] = useState({});
     const [paymentMethod, setPaymentMethod] = useState("");
     const [isPaid, setIsPaid] = useState(false);
@@ -134,7 +134,7 @@ const UserOrderDetailsPageComponent = ({ userInfo, getUser, getOrder, loadPayPal
                         <ListGroup.Item className="text-danger">
                             Total price: <span className="fw-bold">${cartSubtotal}</span>
                         </ListGroup.Item>    
-                        <ListGroup.Item>
+                        <ListGroup.Item> 
                             <div className="d-grid gap-2">
                                 <Button size="lg" onClick={orderHandler} variant="danger" type="button" disabled={buttonDisabled}>
                                     {orderButtonMessage} 

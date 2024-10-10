@@ -22,17 +22,17 @@ const CartItemComponent = ({ item, removeFromCartHandler = false, orderCreated =
                                 <option key={x + 1} value={x + 1}>
                                     {x + 1}
                                 </option>
-                            ))}
+                            ))}     
                         </Form.Select>
-                    </Col> 
-                    <Col md={3}>
+                    </Col>           
+                    <Col md={3}>    
                         <RemoveFromCartComponent 
                         orderCreated={orderCreated}
                         productID={item.productID}
                         quantity={item.quantity}
                         price={item.price}
                         removeFromCartHandler={removeFromCartHandler ? removeFromCartHandler : undefined}
-                        />
+                        />      
                     </Col>
                 </Row>
             </ListGroup.Item>

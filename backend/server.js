@@ -8,8 +8,8 @@ const cookieParser = require("cookie-parser")
 const app = express() 
 
 app.use(helmet())  
-
-const httpServer = createServer(app);
+ 
+const httpServer = createServer(app); 
 global.io = new Server(httpServer); 
 
 app.use(express.json());
@@ -72,6 +72,7 @@ io.on("connection", (socket) => {
   })  
 })
 
+//const userRoutes = require("./routes/userRoutes");
 const apiRoutes = require("./routes/apiRoutes")
 
 //remove for heroku
@@ -112,7 +113,7 @@ app.use((error, req, res, next) => {
     res.status(500).json({
       message: error.message,
     })
-  }
+  }  
  })   
 
 const PORT = process.env.PORT || 5000;   

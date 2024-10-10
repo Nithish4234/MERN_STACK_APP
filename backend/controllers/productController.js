@@ -15,7 +15,7 @@ const getProducts = async (req, res, next) => {
         }
         let ratingQueryCondition = {}
         if (req.query.rating) {
-            queryCondition = true;
+            queryCondition = true; 
             ratingQueryCondition = { rating: { $in: req.query.rating.split(",") } }
         }
         let categoryQueryCondition = {}
@@ -184,7 +184,7 @@ const adminUpdateProduct = async (req, res, next) => {
         const { name, description, count, price, category, attributesTable } = req.body
         product.name = name || product.name
         product.description = description || product.description
-        product.count = count || product
+        product.count = count || product.count
         product.price = price || product.price
         product.category = category || product.category
         if( attributesTable.length > 0 ) {
