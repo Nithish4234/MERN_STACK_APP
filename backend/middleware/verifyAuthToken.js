@@ -42,7 +42,7 @@ const verifyIsLoggedIn = (req, res, next) => {
         // Check if the token exists
         if (!token) {
             return res.status(403).send("A token is required for authentication");
-        }
+        } 
 
         // Verify the token
         try {
